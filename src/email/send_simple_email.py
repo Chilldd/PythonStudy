@@ -19,7 +19,7 @@ message['Subject'] = Header(subject, 'utf-8')
 
 try:
     smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_server_ip, mail_server_port)    # 25 为 SMTP 端口号
+    smtpObj.connect(mail_server_ip, mail_server_port)
     smtpObj.login(mail_user, mail_pwd)
     smtpObj.sendmail(sender, receivers, message.as_string())
     print("邮件发送成功")
